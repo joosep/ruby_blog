@@ -1,0 +1,20 @@
+<p>
+  <b>Commenter:</b>
+  <%= comment.commenter %>
+</p>
+ 
+<p>
+  <b>Comment:</b>
+  <%= comment.body %>
+</p>
+
+<p>
+  <b>Delete</b>
+  <%= check_box_tag "comments_to_delete[]", comment.id %>
+<p>
+  
+<p>
+  <%= link_to 'Destroy Comment', [comment.post, comment],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+</p>
